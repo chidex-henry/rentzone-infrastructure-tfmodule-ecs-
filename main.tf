@@ -67,12 +67,12 @@ module "rds" {
 #create application load balancer 
 module "application_load_balancer" {
   source = "git@github.com:chidex-henry/Terraform-modules.git//alb"
-  variable "project_name" {}
-variable "environment" {}
-variable "alb_security_group_id" {}
-variable "public_subnet_az1_id" {}
-variable "public_subnet_az2_id" {}
-variable "target_type" {}
-variable "vpc_id" {}
-variable "certificate_arn" {}
+  project_name = local.project_name
+  environment = local.environment
+  alb_security_group_id = module.security_group.alb_security_group_id
+  public_subnet_az1_id = module.vpc.public_subnet_az1_id 
+  public_subnet_az2_id = module.vpc.public_subnet_az2_id 
+  target_type = var.target_type
+  vpc_id = module.vpc.vpc_id
+  certificate_arn = var.certificate_arn
 }
