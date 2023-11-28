@@ -63,3 +63,16 @@ module "rds" {
 #   domain_name       = var.domain_name
 #   alternative_names = var.alternative_names
 # }
+
+#create application load balancer 
+module "application_load_balancer" {
+  source = "git@github.com:chidex-henry/Terraform-modules.git//alb"
+  variable "project_name" {}
+variable "environment" {}
+variable "alb_security_group_id" {}
+variable "public_subnet_az1_id" {}
+variable "public_subnet_az2_id" {}
+variable "target_type" {}
+variable "vpc_id" {}
+variable "certificate_arn" {}
+}
