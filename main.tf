@@ -76,3 +76,11 @@ module "application_load_balancer" {
   vpc_id                = module.vpc.vpc_id
   certificate_arn       = var.certificate_arn
 }
+
+# create s3 bucket 
+module "s3_bucket" {
+  source               = "git@github.com:chidex-henry/Terraform-modules.git//s3"
+  project_name         = local.project_name
+  env_file_bucket_name = var.env_file_bucket_name
+  env_file_name        = var.env_file_name
+}
