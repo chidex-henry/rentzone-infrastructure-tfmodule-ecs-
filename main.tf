@@ -117,3 +117,17 @@ module "ecs_asg" {
   environment  = local.environment
   ecs_service  = module.ecs.ecs_service
 }
+
+# create route 53 
+module "route53" {
+  source                             = "git@github.com:chidex-henry/Terraform-modules.git//route 53"
+  domain_name                        = var.domain_name
+  record_name                        = var.record_name
+  application_load_balancer_dns_name = module.application_load_balancer.application_load_balancer_dns_name
+  application_load_balancer_zone_id  = module.application_load_balancer.application_load_balancer_zone_id
+}
+
+# print the website url
+output "website_url" {
+  value = join("", ["https://", var.record_name, ".", var.var.domain_name])
+}

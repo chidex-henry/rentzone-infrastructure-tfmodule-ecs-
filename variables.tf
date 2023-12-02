@@ -33,3 +33,7 @@ variable "env_file_name" {}
 #ecs variables 
 variable "architecture" {}
 variable "container_image" {}
+
+#route 53 variables 
+variable "domain_name" {}
+variable "record_name" {}
