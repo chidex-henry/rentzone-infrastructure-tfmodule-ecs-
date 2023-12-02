@@ -109,3 +109,11 @@ module "ecs" {
   app_server_security_group_id = module.security_group.app_server_security_group_id
   alb_target_group_arn         = module.application_load_balancer.alb_target_group_arn
 }
+
+# create aut scaling group
+module "ecs_asg" {
+  source       = "git@github.com:chidex-henry/Terraform-modules.git//asg-ecs"
+  project_name = local.project_name
+  environment  = local.environment
+  ecs_service  = module.ecs.ecs_service
+}
