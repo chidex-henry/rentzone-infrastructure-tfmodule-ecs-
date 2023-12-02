@@ -120,7 +120,7 @@ module "ecs_asg" {
 
 # create route 53 
 module "route53" {
-  source                             = "git@github.com:chidex-henry/Terraform-modules.git//route 53"
+  source                             = "git@github.com:chidex-henry/Terraform-modules.git//route-53"
   domain_name                        = var.domain_name
   record_name                        = var.record_name
   application_load_balancer_dns_name = module.application_load_balancer.application_load_balancer_dns_name
