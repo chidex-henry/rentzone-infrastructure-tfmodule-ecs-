@@ -74,7 +74,7 @@ module "application_load_balancer" {
   public_subnet_az2_id  = module.vpc.public_subnet_az2_id
   target_type           = var.target_type
   vpc_id                = module.vpc.vpc_id
-  certificate_arn       = var.certificate_arn
+  ssl_certificate_arn   = var.ssl_certificate_arn
 }
 
 # create s3 bucket 
@@ -129,5 +129,5 @@ module "route53" {
 
 # print the website url
 output "website_url" {
-  value = join("", ["https://", var.record_name, ".", var.var.domain_name])
+  value = join("", ["https://", var.record_name, ".", var.domain_name])
 }
