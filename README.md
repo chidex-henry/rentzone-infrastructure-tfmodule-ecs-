@@ -1,4 +1,4 @@
-#### Building AWS infrastructures with Terraform Modules
+# Building AWS infrastructures with Terraform Modules
 
 ### Overview
 This project demonstrates the deployment of the Rentzone application on Amazon Web Services (AWS) infrastructure using Terraform modules. By utilizing Terraform modules, the project efficiently packages and deploys AWS resources, ensuring the scalability, reliability, and security of the application.
