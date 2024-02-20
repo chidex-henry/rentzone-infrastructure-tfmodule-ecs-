@@ -44,6 +44,18 @@ This project demonstrates the deployment of the Rentzone application on Amazon W
 6. Monitor the deployment process and ensure successful provisioning of resources.
 7. Access the Rentzone application using the provided domain name.
 
+
+Usage
+AWS Configuration: Ensure you have valid AWS credentials and configure them properly.
+Terraform Setup: Install Terraform locally and initialize the project using terraform init.
+Configuration Customization: Customize the variables.tf file to match your specific requirements such as VPC CIDR blocks, instance types, and domain names.
+Module Invocation: Invoke Terraform modules within your main configuration files to provision AWS resources.
+Deployment: Execute terraform plan followed by terraform apply to deploy the infrastructure.
+Monitoring and Management: Regularly monitor the AWS resources through the AWS Management Console and CloudWatch.
+Maintenance: Update Terraform configurations as needed and apply changes using Terraform commands.
+Destruction: When the infrastructure is no longer needed, use terraform destroy to tear down all provisioned resources.
+   
+
 ### Conclusion
 This project showcases the power of Terraform modules in simplifying the deployment and management of AWS infrastructures for complex applications like Rentzone. By encapsulating resource configurations into reusable modules, developers can streamline the provisioning process while maintaining scalability, reliability, and security.
 
