@@ -1,9 +1,7 @@
-**Rentzone Application Deployment with Terraform Modules**
-
----
+**Building AWS infrastructures with Terraform Modules**
 
 ### Overview
-This project demonstrates the deployment of the Rentzone application on Amazon Web Services (AWS) infrastructure using Terraform modules. By utilizing Terraform modules, the project efficiently packages and deploys AWS resources, ensuring scalability, reliability, and security of the application.
+This project demonstrates the deployment of the Rentzone application on Amazon Web Services (AWS) infrastructure using Terraform modules. By utilizing Terraform modules, the project efficiently packages and deploys AWS resources, ensuring the scalability, reliability, and security of the application.
 
 ### Project Components
 
@@ -49,6 +47,6 @@ This project demonstrates the deployment of the Rentzone application on Amazon W
 ### Conclusion
 This project showcases the power of Terraform modules in simplifying the deployment and management of AWS infrastructures for complex applications like Rentzone. By encapsulating resource configurations into reusable modules, developers can streamline the provisioning process while maintaining scalability, reliability, and security.
 
-This README provides an overview of the Rentzone application deployment using Terraform modules on AWS. It outlines the project components, usage instructions, and highlights the benefits of using Terraform for infrastructure as code (IaC) deployments.
+This README provides an overview of the Rentzone application deployment using Terraform modules on AWS. It outlines the project components, and usage instructions, and highlights the benefits of using Terraform for infrastructure as code (IaC) deployments.
 
 <img width="468" alt="image" src="https://github.com/chidex-henry/rentzone-infrastructure-tfmodule-ecs-/assets/77998377/bd8efa3e-1b93-4946-ab93-c79501146a9c">
